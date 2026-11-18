@@ -31,6 +31,8 @@ The published single-page layout, all public image/logo assets, fonts, original 
 
 Set the selected domain in Settings → Pages and configure its DNS according to [GitHub's custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). Verify the new address and HTTPS before retiring the old hosting. The email address currently uses kineticats.com, so preserve its mail configuration if that address is still in use.
 
-## Paw study
+## Paw illustrations
 
-Open [the interactive paw study](https://jamminstein.github.io/kineticats/paw-study/). This separate concept page has a fully local Three.js 0.187.0 renderer, procedural sculpted paws, drag/keyboard rotation, three material finishes and comparison with the four original illustrations. Auto-rotation is off by default. The original homepage remains the migration baseline.
+The original flat black-and-white illustrations and page layout remain in place. Production and Coding were redrawn to correct the extra main toe; Design and Writing retain their original artwork. The two corrected illustrations each show four main toes, with the dewclaw out of view. All responsive variants use the corrected artwork.
+
+The earlier 3D experiment is retired; its source remains available in Git history at `22ffd43`. `/paw-study/` redirects to the original page.
