@@ -6,14 +6,14 @@ function showMode(mode) {
   document.querySelectorAll('[data-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === mode)));
   grid.querySelectorAll('article').forEach(card => {
     const paw = card.dataset.paw;
-    const src = stickers ? `../_assets/v11/paw-sticker-${paw}-v2.png` : `photos/${paw}.png`;
+    const src = stickers ? `../_assets/v11/paw-sticker-${paw}-v2.png` : `photos/${paw}-centered.png`;
     const image = card.querySelector('img');
     image.src = src;
-    image.alt = `${stickers ? 'Black-and-white ink sticker — cat front paw showing its furry back' : 'Realistic ' + coats[paw].toLowerCase() + ' — cat front paw at a three-quarter angle, with flexed toes and some visible pads'}`;
+    image.alt = `${stickers ? 'Black-and-white ink sticker — cat front paw showing its furry back' : 'Realistic ' + coats[paw].toLowerCase() + ' — cat front paw centered upright, with flexed toes and its soft underside pads facing the viewer'}`;
     card.querySelector('.artwork').href = src;
     card.querySelector('.download').href = src;
     card.querySelector('.coat').textContent = stickers ? 'Black ink · white paper' : coats[paw];
   });
-  document.querySelector('#status').textContent = stickers ? 'Monochrome stickers · all four furry backs' : 'Realistic studies · relaxed poses and visible pads';
+  document.querySelector('#status').textContent = stickers ? 'Monochrome stickers · all four furry backs' : 'Realistic studies · centered, pads facing you';
 }
 document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => showMode(button.dataset.mode)));
