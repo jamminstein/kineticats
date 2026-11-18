@@ -33,6 +33,8 @@ Set the selected domain in Settings → Pages and configure its DNS according to
 
 ## Paw illustrations
 
-The original flat black-and-white illustrations and page layout remain in place. Production and Coding were redrawn to correct the extra main toe; Design and Writing retain their original artwork. The two corrected illustrations each show four main toes, with the dewclaw out of view. All responsive variants use the corrected artwork.
+All four illustrations retain their original flat black-and-white visual styles and the original layout. They now explicitly depict front paws with five toes: four forward digits and a smaller inner first digit bearing a dewclaw, positioned farther toward the wrist. The underside illustration includes the fifth digital pad, the central metacarpal pad and the separate carpal pad. All responsive variants use the updated artwork.
+
+Anatomy references: [WSU Extension Cat Project Unit One, page 19](https://ucanr.edu/sites/default/files/2024-07/400276.pdf) and [Zoetis veterinary explanation of dewclaws](https://www.zoetispetcare.com/blog/article/what-are-dewclaws). These are stylized brand illustrations, not clinical diagrams.
 
 The earlier 3D experiment is retired; its source remains available in Git history at `22ffd43`. `/paw-study/` redirects to the original page.
