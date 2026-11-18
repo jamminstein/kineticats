@@ -37,4 +37,10 @@ All four illustrations retain their original flat black-and-white visual styles 
 
 Anatomy references: [WSU Extension Cat Project Unit One, page 19](https://ucanr.edu/sites/default/files/2024-07/400276.pdf) and [Zoetis veterinary explanation of dewclaws](https://www.zoetispetcare.com/blog/article/what-are-dewclaws). These are stylized brand illustrations, not clinical diagrams.
 
-The earlier 3D experiment is retired; its source remains available in Git history at `22ffd43`. `/paw-study/` redirects to the original page.
+## Rotatable relief and finish studies
+
+Open [Ink in depth](https://jamminstein.github.io/kineticats/paw-study/). All four corrected drawings are used as the actual front textures of rounded 3D reliefs. Geometry follows each image silhouette; the depth and plain reverse are interpretations, not a complete anatomical reconstruction. Drag, use the arrow keys, or press Home to reset; the original-image comparison preserves the flat artwork. Rendering occurs on interaction and resize, with no automatic rotation. Original drawings remain available if WebGL is unavailable.
+
+Three static finish studies use the Production paw as their reference: realistic fur, rough printed ink and carved graphite. These are generated art-direction variations, separately viewable at full image resolution. The home page keeps the flat ink illustrations.
+
+The earlier generic 3D experiment remains in Git history at `22ffd43`; this version derives the relief from the actual artwork. The Three.js runtime is bundled locally, with its license in `paw-study/vendor/THREE-LICENSE.txt`.
