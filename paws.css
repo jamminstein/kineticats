@@ -43,7 +43,7 @@
 .paw-state:has(img[src*="writing"]) { --paw-frame-turn: -.7deg; }
 .paw-state:has(img[src*="coding"]) { --paw-frame-turn: .3deg; }
 
-/* Preserve the existing homepage card arrangement and label treatment. */
+/* Preserve the homepage card arrangement, with plain discipline names. */
 main section:has(img[src*="paw-photo-"]) {
   height: auto !important; min-height: 0 !important;
   padding-top: 64px !important; padding-bottom: 64px !important;
@@ -58,11 +58,11 @@ main div:has(> img[src*="paw-photo-"]) {
 main img[src*="paw-photo-"] { object-fit: contain !important; }
 main div:has(> img[src*="paw-photo-"]) + div {
   align-self: center; margin-top: 12px !important; width: fit-content !important;
-  padding: 8px 14px !important; background: #191919; transform: rotate(-1deg);
+  padding: 0 !important; background: transparent !important; transform: none !important;
 }
 main div:has(> img[src*="paw-photo-"]) + div,
 main div:has(> img[src*="paw-photo-"]) + div * {
-  color: #fff !important; -webkit-text-fill-color: #fff !important;
+  color: #191919 !important; -webkit-text-fill-color: #191919 !important;
 }
 @media (prefers-reduced-motion: reduce) {
   .paw-state > .paw-base-image, .paw-state > .paw-hover-image { transition: none; }
