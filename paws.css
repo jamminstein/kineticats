@@ -1,0 +1,36 @@
+.paw-state { position: relative !important; cursor: pointer; touch-action: manipulation; }
+.paw-state:focus-visible { outline: 2px solid #191919; outline-offset: 5px; }
+.paw-state > .paw-base-image { opacity: 1; transition: opacity 220ms ease; }
+.paw-state > .paw-hover-image {
+  position: absolute !important; inset: 0 !important; display: block;
+  width: 100% !important; height: 100% !important; object-fit: contain !important;
+  opacity: 0; pointer-events: none; transition: opacity 220ms ease;
+}
+.paw-state.is-revealed[data-hover-ready] > .paw-hover-image { opacity: 1; }
+.paw-disabled { cursor: default; }
+.paw-disabled > .paw-hover-image { display: none; }
+
+/* Preserve the existing homepage card arrangement and label treatment. */
+main section:has(img[src*="paw-photo-"]) {
+  height: auto !important; min-height: 0 !important;
+  padding-top: 64px !important; padding-bottom: 64px !important;
+}
+main div:has(> div > img[src*="paw-photo-"]) {
+  height: auto !important; gap: 0 !important; align-items: center;
+}
+main div:has(> img[src*="paw-photo-"]) {
+  overflow: hidden !important; height: auto !important; aspect-ratio: 1 !important;
+  flex-shrink: 0; background: #fff;
+}
+main img[src*="paw-photo-"] { object-fit: contain !important; }
+main div:has(> img[src*="paw-photo-"]) + div {
+  align-self: center; margin-top: 12px !important; width: fit-content !important;
+  padding: 8px 14px !important; background: #191919; transform: rotate(-1deg);
+}
+main div:has(> img[src*="paw-photo-"]) + div,
+main div:has(> img[src*="paw-photo-"]) + div * {
+  color: #fff !important; -webkit-text-fill-color: #fff !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .paw-state > .paw-base-image, .paw-state > .paw-hover-image { transition: none; }
+}
