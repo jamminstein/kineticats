@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none">
+  <!-- One continuous, gently uneven outline echoing the Kineticats logo. -->
+  <path d="M500 70C680 68 785 84 835 142C886 197 905 350 905 500C905 671 886 815 830 871C773 927 655 943 500 941C343 943 226 926 169 870C113 814 95 666 95 500C95 337 112 192 165 139C220 83 332 70 500 70Z" stroke="#080808" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
