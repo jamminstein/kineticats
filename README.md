@@ -44,3 +44,9 @@ Open [Ink in depth](https://jamminstein.github.io/kineticats/paw-study/). All fo
 Three static finish studies use the Production paw as their reference: realistic fur, rough printed ink and carved graphite. These are generated art-direction variations, separately viewable at full image resolution. The home page keeps the flat ink illustrations.
 
 The earlier generic 3D experiment remains in Git history at `22ffd43`; this version derives the relief from the actual artwork. The Three.js runtime is bundled locally, with its license in `paw-study/vendor/THREE-LICENSE.txt`.
+
+## Full 3D fur study
+
+Open [Fur in the round](https://jamminstein.github.io/kineticats/paw-realistic/). This separate prototype uses a complete volumetric mesh with four forward toes, a smaller inner digit, five curved claws, seven pads and individual tapered fur strands. The underside is an interpretation of feline anatomy; it is not recovered from the single reference image. It rotates through 360 degrees and supports zoom, front/pad views, two lighting presets and comparison with the original photorealistic style image.
+
+This is an editable first model, not a photorealistic final asset or a rigged animation. The coat and forms still read softer and more stylized than the reference. The home page retains the approved flat illustrations. Geometry is Draco-compressed for delivery; Three.js and its matching Draco decoder are bundled locally. The reproducible Blender builder is in `paw-realistic/source/build_model.py`; running it creates an ignored `rebuilt/` folder beside the script. The uncompressed model and editable Blender scene are delivered separately.
