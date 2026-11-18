@@ -1,5 +1,14 @@
 .paw-state { position: relative !important; cursor: pointer; touch-action: manipulation; }
-.paw-state:focus-visible { outline: 2px solid #191919; outline-offset: 5px; }
+.paw-state:focus-visible { outline: none !important; }
+.paw-state:focus-visible::before {
+  content: '';
+  position: absolute;
+  inset: 2.6% 10%;
+  border: 2px dashed #191919;
+  border-radius: 50%;
+  z-index: 3;
+  pointer-events: none;
+}
 .paw-state > .paw-base-image { opacity: 1; transition: opacity 220ms ease; }
 .paw-state > .paw-hover-image {
   position: absolute !important; inset: 0 !important; display: block;
@@ -9,6 +18,30 @@
 .paw-state.is-revealed[data-hover-ready] > .paw-hover-image { opacity: 1; }
 .paw-disabled { cursor: default; }
 .paw-disabled > .paw-hover-image { display: none; }
+
+/* A loose ink portrait frame turns the lower crop into an intentional oval. */
+.paw-state:not(.paw-disabled) {
+  isolation: isolate;
+  border-color: transparent;
+}
+.paw-state:not(.paw-disabled) > .paw-base-image,
+.paw-state:not(.paw-disabled) > .paw-hover-image {
+  box-sizing: border-box;
+  padding: 4% !important;
+  clip-path: ellipse(36% 43% at 50% 49%);
+}
+.paw-state:not(.paw-disabled)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: url('./_assets/v11/paw-portrait-frame.svg') center / 100% 100% no-repeat;
+  pointer-events: none;
+  transform: rotate(var(--paw-frame-turn, -.45deg));
+}
+.paw-state:has(img[src*="design"]) { --paw-frame-turn: .55deg; }
+.paw-state:has(img[src*="writing"]) { --paw-frame-turn: -.7deg; }
+.paw-state:has(img[src*="coding"]) { --paw-frame-turn: .3deg; }
 
 /* Preserve the existing homepage card arrangement and label treatment. */
 main section:has(img[src*="paw-photo-"]) {
