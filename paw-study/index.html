@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Kineticats — Paw study</title>
+<link rel="icon" href="../_assets/v11/942e2979ea126743ada3553effc8c8b6a81b52d7.png">
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+<header><a href="../" aria-label="Kineticats home">KINETICATS<span>®</span></a><span>PAW STUDY · 01</span><a href="../">Back to the studio ↗</a></header>
+<main>
+<section class="intro"><p class="eyebrow">CURIOSITY. AGILITY. PRECISION.</p><h1>A little more <br><em>animal.</em></h1><p>The familiar paw, given weight, light and a life of its own. Turn it around.</p></section>
+<section class="object" aria-label="Interactive paw sculpture">
+<div class="stage" id="stage"><img id="original" src="../_assets/v11/ddae170e13c1ddda4e61c20e40fcf39964cfbc0e.png" alt="Original black ink illustration of a cat paw with extended claws" hidden><div id="canvas-holder"></div><p id="fallback" hidden>Your browser cannot show the 3D view. The original illustration is shown instead.</p><span class="index" aria-hidden="true">01 / 04</span><span class="stage-note" id="stage-note">DRAG TO ROTATE · ARROW KEYS TO TURN</span></div>
+<div class="object-bar"><div><span class="eyebrow">THE PAWS</span><h2 id="paw-title">Production</h2></div><button id="reset" aria-label="Reset paw rotation">Reset view ↺</button></div>
+<div class="services" aria-label="Choose a paw"><button data-paw="0" aria-pressed="true">01 <span>Production</span></button><button data-paw="1" aria-pressed="false">02 <span>Design</span></button><button data-paw="2" aria-pressed="false">03 <span>Writing</span></button><button data-paw="3" aria-pressed="false">04 <span>Coding</span></button></div>
+</section>
+<aside class="controls"><fieldset><legend>View</legend><div class="segmented"><button id="view-3d" aria-pressed="true">3D object</button><button id="view-2d" aria-pressed="false">Original ink</button></div></fieldset><fieldset><legend>Finish</legend><div class="finishes"><button data-finish="graphite" aria-pressed="true"><i class="graphite"></i>Graphite</button><button data-finish="porcelain" aria-pressed="false"><i class="porcelain"></i>Porcelain</button><button data-finish="ink" aria-pressed="false"><i class="ink"></i>Ink</button></div></fieldset><button id="spin" aria-pressed="false">Auto rotate <span>Off</span></button><p class="note">A first sculptural direction. The four paws share a form, with their own stance and silhouette.</p><p class="status" id="status" role="status" aria-live="polite">Loading the paw…</p></aside>
+</main>
+<footer><span>INSTINCT IN MOTION.</span><span>Illustration ↔ sculpture</span></footer>
+<script type="module" src="./paw.js"></script>
+</body></html>

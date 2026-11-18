@@ -30,3 +30,7 @@ The published single-page layout, all public image/logo assets, fonts, original 
 ## Custom domain later
 
 Set the selected domain in Settings → Pages and configure its DNS according to [GitHub's custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). Verify the new address and HTTPS before retiring the old hosting. The email address currently uses kineticats.com, so preserve its mail configuration if that address is still in use.
+
+## Paw study
+
+Open [the interactive paw study](https://jamminstein.github.io/kineticats/paw-study/). This separate concept page has a fully local Three.js 0.187.0 renderer, procedural sculpted paws, drag/keyboard rotation, three material finishes and comparison with the four original illustrations. Auto-rotation is off by default. The original homepage remains the migration baseline.
