@@ -4,7 +4,7 @@ main img[src*="paw-sticker-"] {
   object-fit: contain !important;
   transform: rotate(var(--sticker-angle)) scale(1.04);
   transform-origin: 50% 55%;
-  filter: drop-shadow(1px 2px 0 rgba(30, 26, 19, .2)) drop-shadow(2px 8px 5px rgba(30, 26, 19, .16));
+  filter: grayscale(1) drop-shadow(1px 2px 0 rgba(0, 0, 0, .2)) drop-shadow(2px 8px 5px rgba(0, 0, 0, .16));
   transition: transform 180ms ease, filter 180ms ease;
 }
 main img[src*="paw-sticker-design"] { --sticker-angle: 4deg; }
@@ -32,15 +32,15 @@ main div:has(> img[src*="paw-sticker-"]) + div {
   margin-top: -16px !important;
   width: fit-content !important;
   padding: 8px 14px !important;
-  background: #191918;
+  background: #191919;
   transform: rotate(-1deg);
 }
 main div:has(> img[src*="paw-sticker-"]) + div,
-main div:has(> img[src*="paw-sticker-"]) + div * { color: #fffdf4 !important; -webkit-text-fill-color: #fffdf4 !important; }
+main div:has(> img[src*="paw-sticker-"]) + div * { color: #fff !important; -webkit-text-fill-color: #fff !important; }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   main img[src*="paw-sticker-"]:hover {
     transform: translateY(-3px) rotate(calc(var(--sticker-angle) + 1deg)) scale(1.05);
-    filter: drop-shadow(1px 3px 0 rgba(30, 26, 19, .18)) drop-shadow(3px 11px 7px rgba(30, 26, 19, .18));
+    filter: grayscale(1) drop-shadow(1px 3px 0 rgba(0, 0, 0, .18)) drop-shadow(3px 11px 7px rgba(0, 0, 0, .18));
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -5,16 +5,17 @@ const base = new URL('./', import.meta.url);
 const local = path => new URL(path.replace(/^\//, ''), base).href;
 // The exported runtime sometimes resolves image hashes directly at responsive breakpoints.
 const pawAssets = {
-  'a23190a470543c751ad84176066316c93a38fd10.png': 'paw-sticker-production-v1.png',
-  '798254cfa0dea63d8c1992c4798cf2ea5cfbab0f.png': 'paw-sticker-design-v1.png',
-  '374d3dc1882bb2d7023aa5d3ba855cfc17155ffa.png': 'paw-sticker-writing-v1.png',
-  '445b95a23f2f378c5cd193ed9ad0cf6a08b77048.png': 'paw-sticker-coding-v1.png',
+  'a23190a470543c751ad84176066316c93a38fd10.png': 'paw-sticker-production-v2.png',
+  '798254cfa0dea63d8c1992c4798cf2ea5cfbab0f.png': 'paw-sticker-design-v2.png',
+  '374d3dc1882bb2d7023aa5d3ba855cfc17155ffa.png': 'paw-sticker-writing-v2.png',
+  '445b95a23f2f378c5cd193ed9ad0cf6a08b77048.png': 'paw-sticker-coding-v2.png',
 };
 const labelStickers = () => {
   document.querySelectorAll('main img[src*="paw-sticker-"]').forEach(image => {
-    const role = image.src.match(/paw-sticker-(production|design|writing|coding)-/)[1];
+    const role = image.src.match(/paw-sticker-(production|design|writing|coding)-/)?.[1];
+    if (!role) return;
     const title = role[0].toUpperCase() + role.slice(1);
-    image.alt = `${title} — distressed ink cat-paw sticker with five toes${role === 'coding' ? ' and seven pads' : ''}`;
+    image.alt = `${title} — black-and-white paw sticker showing the furry back and five toes`;
   });
 };
 new MutationObserver(labelStickers).observe(document.getElementById('container'), {
