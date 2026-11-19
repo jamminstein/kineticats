@@ -24,7 +24,6 @@ The published single-page layout, all public image/logo assets, fonts, original 
 - Replace the generated layout with readable semantic HTML/CSS as we remake the page.
 - Add working, separately accessible telephone, email and Instagram links.
 - Improve mobile spacing, image descriptions and motion controls.
-- Develop a longer cat film as separately generated shots, then edit them into a sequence.
 - Choose the final web address before changing DNS. No domain or DNS change is part of this initial copy.
 
 ## Custom domain later
@@ -57,4 +56,10 @@ The homepage shows the approved centered realistic paw studies as its standard s
 
 [The comparison gallery](https://jamminstein.github.io/kineticats/paw-photos/) has the same interaction, separate Standard and Hover downloads, and a toggle for the preserved monochrome stickers. Each version is a generated image study. Earlier angled and cleaner centered studies remain in the photos folder.
 
-`paw-interactions.js` and `paws.css` own the interaction. The homepage initializes these layers after the original Figma runtime finishes hydration and reapplies them at responsive breakpoints. One thick continuous black outline, shaped like the rounded square in the Kineticats logo, surrounds each realistic paw. Both image states use the same matching crop with room for the claws. The frame is a lightweight local SVG with no ornaments or rotation; it stays still during the hover crossfade and is omitted in sticker comparison mode. The original page layout and cover film are retained. Discipline names appear as plain, unrotated dark text beneath each frame, with no background box.
+`paw-interactions.js` and `paws.css` own the interaction. The homepage initializes these layers after the original Figma runtime finishes hydration and reapplies them at responsive breakpoints. One thick continuous black outline, shaped like the rounded square in the Kineticats logo, surrounds each realistic paw. Both image states use the same matching crop with room for the claws. The frame is a lightweight local SVG with no ornaments or rotation; it stays still during the hover crossfade and is omitted in sticker comparison mode. The original page layout is retained. Discipline names appear as plain, unrotated dark text beneath each frame, with no background box.
+
+## Running-cat cover
+
+The homepage now plays a silent four-minute film containing all 100 cats once. It opens with 15 seconds of ordinary cats, introduces surreal cats increasingly often, and becomes entirely surreal at 2:22. The edit uses reviewed frontal running excerpts, a neutral contrast curve and fine temporal luminance grain.
+
+`_videos/v2/kineticats-100-cover.mp4` is the 1920×1080, 24 fps web export (77.9 MB). `boot.js` maps the original cover reference to this file across responsive layouts; autoplay, looping and the paw interactions are preserved. The original film remains under `_videos/v1/`. High-quality clean and graded cover exports and the full untrimmed clean master are retained separately from this repository.

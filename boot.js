@@ -55,7 +55,9 @@ const runtime = new SitesRuntime({
   },
   getAssetURL: filename => local('_assets/v11/' + (pawAssets[filename] || filename)),
   getFontURL: filename => local(filename),
-  getVideoURL: (_, hash) => local('_videos/v1/' + hash + '.mp4'),
+  getVideoURL: (_, hash) => local(hash === '48155b6546b2257a44fa0f97ed9edb4acae90b01'
+    ? '_videos/v2/kineticats-100-cover.mp4'
+    : '_videos/v1/' + hash + '.mp4'),
   renderOptions: { metronomeEnabled: true, transform3dEnabled: false },
 });
 runtime.setLocation(siteHistory.current, true);
