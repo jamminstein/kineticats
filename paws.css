@@ -63,3 +63,37 @@ main div:has(> img[src*="paw-photo-"]) + div * {
 @media (prefers-reduced-motion: reduce) {
   .paw-state > .paw-base-image, .paw-state > .paw-hover-image { transition: none; }
 }
+
+/* Film, Design and Coding share one balanced row; the same cards stack on mobile. */
+main:has(img[src*="paw-photo-"]) {
+  width: 100% !important;
+  max-width: 1920px !important;
+  height: auto !important;
+  gap: 0 !important;
+}
+main section:has(img[src*="paw-photo-"]) {
+  box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px !important;
+  align-items: start !important;
+  width: 100% !important;
+  padding: 64px clamp(24px, 5vw, 80px) !important;
+}
+main section:has(img[src*="paw-photo-"]) > div,
+main div:has(> img[src*="paw-photo-"]) {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+}
+@media (max-width: 767px) {
+  main section:has(img[src*="paw-photo-"]) {
+    grid-template-columns: 1fr;
+    gap: 40px !important;
+    padding: 48px 24px !important;
+  }
+  main section:has(img[src*="paw-photo-"]) > div {
+    max-width: 440px;
+    justify-self: center;
+  }
+}

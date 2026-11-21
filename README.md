@@ -52,7 +52,7 @@ This is an editable first model, not a photorealistic final asset or a rigged an
 
 ## Realistic paw images and hover behavior
 
-The homepage shows the approved centered realistic paw studies as its standard state. Hovering reveals the matching version with visible claws and irregular garden dirt, then returns to the clean state when the pointer leaves. Tapping toggles the effect on touch devices. Keyboard users can focus each paw and use Enter or Space to toggle it, or Escape to reset. Reduced-motion preferences disable the 220ms crossfade, and the standard image remains visible until the hover image has loaded.
+The homepage shows three disciplines: Film, Design and Coding. Their centered realistic paw photographs are selected from the rotating collection below. Hovering reveals the matching version with visible claws and irregular garden dirt, then returns to the clean state when the pointer leaves. Tapping toggles the effect on touch devices. Keyboard users can focus each paw and use Enter or Space to toggle it, or Escape to reset. Reduced-motion preferences disable the 220ms crossfade, and the standard image remains visible until the hover image has loaded.
 
 [The comparison gallery](https://jamminstein.github.io/kineticats/paw-photos/) has the same interaction, separate Standard and Hover downloads, and a toggle for the preserved monochrome stickers. Each version is a generated image study. Earlier angled and cleaner centered studies remain in the photos folder.
 
@@ -71,3 +71,9 @@ The original film is restored in the cover area. The silent 50-second, 100-cat e
 Hover the top-left logo for a short, quiet purr, or the Bradbury Building address in the footer for a meow. Keyboard focus and Enter/Space also work. Sounds have soft edges, stop on leaving the target, do not overlap, and have a short retrigger cooldown. They never loop. The layout stays unchanged. Browsers may require an initial click or keypress before hover audio can play; `cat-sounds.js` unlocks Web Audio on that first gesture. The silent videos remain silent.
 
 The locally hosted recordings and their public-domain/CC0 source credits are in `_audio/CREDITS.txt`.
+
+## Rotating paw collection
+
+Eight matched clean/hover pairs feed the three discipline cards. Four approved pairs are joined by new ginger, mottled white, calico and silver paws, generated with built-in OpenAI image generation. Each new hover was edited from its clean reference to preserve pose and identity while adding claws and garden dirt. All new images are 1254 × 1254 PNGs under `_assets/v12/`.
+
+`paw-collection.js` picks three different pairs once per page load, avoiding all three paws from the preceding visit when local storage is available. Labels remain Film, Design and Coding. The chosen trio stays fixed across responsive breakpoints; blocked storage falls back to a random trio. Both responsive page data and prerendered HTML contain three cards. The row becomes a single column on mobile. The four-paw comparison gallery is retained as an earlier study.
