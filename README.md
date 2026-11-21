@@ -60,8 +60,14 @@ The homepage shows the approved centered realistic paw studies as its standard s
 
 ## Running-cat films
 
-The original film is restored in the cover area. The silent four-minute, 100-cat edit is now revealed behind the massive footer only while hovering the actual strokes of the Kineticats wordmark. The wordmark and footer information become white over the film; moving into letter holes, gaps or the surrounding space restores the original footer and pauses the film. Re-entering resumes playback.
+The original film is restored in the cover area. The silent 50-second, 100-cat edit is now revealed behind the massive footer only while hovering the actual strokes of the Kineticats wordmark. The wordmark and footer information become white over the film; moving into letter holes, gaps or the surrounding space restores the original footer and pauses the film. Re-entering resumes playback.
 
 `footer-film.js` uses the original SVG geometry for exact hit-testing across responsive layouts; `footer-film.css` owns the video layer and white treatment. The original logo artwork, layout, links and paw interactions are preserved. Touch users tap the letter shapes to toggle; keyboard users focus the wordmark and use Enter/Space or Escape. Leaving the viewport or tab pauses the film. With reduced motion enabled, hover reveals a still frame and deliberate keyboard/touch activation can play the film.
 
-`_videos/v2/kineticats-100-cover.mp4` is the 1920×1080, 24 fps web export (77.9 MB), loaded only near the footer. It opens with 15 seconds of ordinary cats, introduces surreal cats increasingly often, and becomes entirely surreal at 2:22. The edit uses reviewed frontal running excerpts, a neutral contrast curve and fine temporal luminance grain. High-quality clean and graded exports and the full untrimmed clean master are retained separately from this repository.
+`_videos/v3/kineticats-100-half-second.mp4` is the 1920×1080, 24 fps web export, loaded only near the footer. Every cat appears for exactly half a second (12 frames), at natural speed, using a central burst within its approved running excerpt. The order is unchanged from the four-minute edit: ordinary cats progress into increasingly surreal cats. The neutral contrast curve and fine temporal luminance grain are preserved. The earlier four-minute export remains under `_videos/v2/`. High-quality clean and graded exports and the full untrimmed clean master are retained separately from this repository.
+
+## Hidden cat sounds
+
+Hover the top-left logo for a short, quiet purr, or the Bradbury Building address in the footer for a meow. Keyboard focus and Enter/Space also work. Sounds have soft edges, stop on leaving the target, do not overlap, and have a short retrigger cooldown. They never loop. The layout stays unchanged. Browsers may require an initial click or keypress before hover audio can play; `cat-sounds.js` unlocks Web Audio on that first gesture. The silent videos remain silent.
+
+The locally hosted recordings and their public-domain/CC0 source credits are in `_audio/CREDITS.txt`.

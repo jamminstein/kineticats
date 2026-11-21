@@ -1,5 +1,6 @@
 import { enhancePaw } from './paw-interactions.js';
-import { enhanceFooterFilms } from './footer-film.js';
+import { enhanceFooterFilms } from './footer-film.js?v=2';
+import { enhanceCatSounds } from './cat-sounds.js';
 import { SitesRuntime } from './_runtimes/sites-runtime.790e4395bedccd325cd4f781fda0945d3eb5bbe6a527c108de2a4fae7131b9bc.js';
 
 // Use module-relative URLs so the mirror runs at /kineticats/ or a custom domain.
@@ -24,6 +25,7 @@ const enhancePaws = () => {
 const enhancePage = () => {
   enhancePaws();
   enhanceFooterFilms(document.getElementById('container'), local);
+  enhanceCatSounds(document.getElementById('container'), local);
 };
 const pawObserver = new MutationObserver(enhancePage);
 let pawsObserved = false;

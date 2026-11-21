@@ -57,7 +57,7 @@ async function mountFooter(image, local) {
   video.loop = true;
   video.playsInline = true;
   video.preload = 'none';
-  video.poster = local('_assets/v11/footer-film-poster.jpg');
+  video.poster = local('_assets/v11/footer-half-second-poster.jpg');
   video.tabIndex = -1;
   layer.append(video);
 
@@ -79,7 +79,7 @@ async function mountFooter(image, local) {
     if (loaded) return;
     loaded = true;
     video.preload = navigator.connection?.saveData ? 'metadata' : 'auto';
-    video.src = local('_videos/v2/kineticats-100-cover.mp4');
+    video.src = local('_videos/v3/kineticats-100-half-second.mp4');
     video.load();
   }
   function render() {
