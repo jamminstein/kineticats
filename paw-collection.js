@@ -5,10 +5,10 @@ export const pawCollection = [
   { id: 'classic-gray', standard: '_assets/v11/paw-photo-design-standard.png', hover: '_assets/v11/paw-photo-design-hover.png' },
   { id: 'classic-soft', standard: '_assets/v11/paw-photo-writing-standard.png', hover: '_assets/v11/paw-photo-writing-hover.png' },
   { id: 'classic-tabby', standard: '_assets/v11/paw-photo-coding-standard.png', hover: '_assets/v11/paw-photo-coding-hover.png' },
-  { id: 'ginger', standard: '_assets/v12/paw-photo-ginger-standard.png', hover: '_assets/v13/paw-photo-ginger-hover-radical.png' },
-  { id: 'white', standard: '_assets/v12/paw-photo-white-standard.png', hover: '_assets/v13/paw-photo-white-hover-radical.png' },
-  { id: 'calico', standard: '_assets/v12/paw-photo-calico-standard.png', hover: '_assets/v13/paw-photo-calico-hover-radical.png' },
-  { id: 'silver', standard: '_assets/v12/paw-photo-silver-standard.png', hover: '_assets/v13/paw-photo-silver-hover-radical.png' },
+  { id: 'ginger', standard: '_assets/v12/paw-photo-ginger-standard.png', hover: '_assets/v14/paw-photo-ginger-hover-forward.png' },
+  { id: 'white', standard: '_assets/v12/paw-photo-white-standard.png', hover: '_assets/v14/paw-photo-white-hover-forward.png' },
+  { id: 'calico', standard: '_assets/v12/paw-photo-calico-standard.png', hover: '_assets/v14/paw-photo-calico-hover-forward.png' },
+  { id: 'silver', standard: '_assets/v12/paw-photo-silver-standard.png', hover: '_assets/v14/paw-photo-silver-hover-forward.png' },
 ];
 
 export function choosePawTrio() {

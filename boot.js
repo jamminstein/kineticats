@@ -1,7 +1,7 @@
 import { enhancePaw } from './paw-interactions.js';
 import { enhanceFooterFilms } from './footer-film.js?v=2';
 import { enhanceCatSounds } from './cat-sounds.js';
-import { choosePawTrio } from './paw-collection.js?v=2';
+import { choosePawTrio } from './paw-collection.js?v=3';
 import { SitesRuntime } from './_runtimes/sites-runtime.790e4395bedccd325cd4f781fda0945d3eb5bbe6a527c108de2a4fae7131b9bc.js';
 
 // Use module-relative URLs so the mirror runs at /kineticats/ or a custom domain.
