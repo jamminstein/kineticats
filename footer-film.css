@@ -1,0 +1,63 @@
+/* The original footer remains unchanged until an actual logo stroke is hovered. */
+#container .film-footer {
+  isolation: isolate;
+  overflow: hidden;
+}
+#container .film-footer > :not(.footer-film-layer) {
+  position: relative;
+  z-index: 1;
+}
+#container .footer-film-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #080808;
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+#container .footer-film-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* A light scrim keeps the contact details legible even over the brightest cats. */
+#container .footer-film-layer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 0 0 / 52%), rgb(0 0 0 / 22%) 42%, rgb(0 0 0 / 28%));
+}
+#container .film-footer.is-film-active .footer-film-layer { opacity: 1; }
+#container .film-footer.is-film-active p,
+#container .film-footer.is-film-active a,
+#container .film-footer.is-film-active .textContents {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+#container .film-footer.is-film-active .footer-wordmark-image {
+  filter: brightness(0) invert(1);
+}
+#container .footer-wordmark-control { outline: none; }
+#container .footer-wordmark-control:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 4px;
+}
+#container .film-footer.is-film-active .footer-wordmark-control { color: #fff; }
+#container .footer-wordmark-hitarea {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+#container .footer-wordmark-hitarea path {
+  pointer-events: fill;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) {
+  #container .footer-film-layer { transition: none; }
+}
